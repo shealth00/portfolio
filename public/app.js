@@ -195,7 +195,7 @@
     document.body.style.overflow = '';
   }
 
-  document.querySelectorAll('#samples .read[data-sample]').forEach((btn) => {
+  document.querySelectorAll('.read[data-sample]').forEach((btn) => {
     btn.addEventListener('click', () => open(btn.dataset.sample));
   });
   closeBtn.addEventListener('click', close);
