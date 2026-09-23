@@ -1,51 +1,61 @@
-// app.js — primary tab switching (Medical Writer / Writing Samples) and the
-// category filter chips within the Writing Samples tab. No backend, no
-// external data — everything on this page ships as static content.
+// app.js — category filter pills for the Writing section, and the contact
+// form (POSTs to this app's own /api/contact endpoint, which is the only
+// thing that talks to Supabase — no database keys ever reach the browser).
 
 (function () {
-  const tabButtons = document.querySelectorAll('.tabbar button');
-  const panels = { writer: document.getElementById('panel-writer'), samples: document.getElementById('panel-samples') };
-
-  function activateTab(name) {
-    tabButtons.forEach((btn) => {
-      const isActive = btn.dataset.tab === name;
-      btn.classList.toggle('active', isActive);
-      btn.setAttribute('aria-selected', String(isActive));
+  const pills = document.querySelectorAll('.pill');
+  const cards = document.querySelectorAll('#samples .card');
+  pills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      pills.forEach((p) => p.classList.remove('active'));
+      pill.classList.add('active');
+      const filter = pill.dataset.filter;
+      cards.forEach((card) => {
+        const cats = (card.dataset.cat || '').split(' ');
+        card.style.display = filter === 'all' || cats.includes(filter) ? '' : 'none';
+      });
     });
-    Object.entries(panels).forEach(([key, panel]) => {
-      panel.hidden = key !== name;
-    });
-    try { localStorage.setItem('differential-tab', name); } catch (e) { /* private mode, etc. */ }
-    if (history.replaceState) history.replaceState(null, '', name === 'samples' ? '#samples' : '#');
-  }
-
-  tabButtons.forEach((btn) => {
-    btn.addEventListener('click', () => activateTab(btn.dataset.tab));
   });
-
-  let initial = 'writer';
-  if (window.location.hash === '#samples') {
-    initial = 'samples';
-  } else {
-    try {
-      const saved = localStorage.getItem('differential-tab');
-      if (saved === 'samples' || saved === 'writer') initial = saved;
-    } catch (e) { /* ignore */ }
-  }
-  activateTab(initial);
 })();
 
 (function () {
-  const buttons = document.querySelectorAll('.filters button');
-  const cards = document.querySelectorAll('.case-card');
-  buttons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      buttons.forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      cards.forEach((card) => {
-        card.hidden = filter !== 'all' && card.dataset.cat !== filter;
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('cf-status');
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const payload = {
+      name: document.getElementById('cf-name').value.trim(),
+      email: document.getElementById('cf-email').value.trim(),
+      project: document.getElementById('cf-project').value,
+      message: document.getElementById('cf-message').value.trim(),
+    };
+    if (!payload.name || !payload.email || !payload.message) return;
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+    status.hidden = true;
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
       });
-    });
+      if (!res.ok) throw new Error('Request failed');
+      status.textContent = 'Thanks — your message is in. I’ll reply soon.';
+      status.className = 'form-status ok';
+      status.hidden = false;
+      form.reset();
+    } catch (err) {
+      status.textContent = 'Something went wrong sending that — please try again in a moment.';
+      status.className = 'form-status err';
+      status.hidden = false;
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send';
+    }
   });
 })();
