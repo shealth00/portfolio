@@ -1,0 +1,15 @@
+{
+  "name": "medical-writer-portfolio",
+  "version": "1.0.0",
+  "description": "Dr. Ishmael Amu — medical, pharma, and public-health writing portfolio.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
