@@ -276,6 +276,43 @@
         <p>An SOP in this domain has to make the phase-dependent and population-dependent branches explicit rather than writing one generic "get IRB approval" instruction — the actual compliance risk lives in the differences between phases and populations, not in the parts of the process that are the same every time.</p>
       `,
     },
+    visualcomm: {
+      meta: 'Scientific visual communication · Sample diagrams',
+      title: 'Two Diagram Types, Two Different Jobs',
+      body: `
+        <p>Scientific visual communication isn't one skill — a mechanism map and a diagnostic workflow are built to answer different questions, and using the wrong diagram type for the question is a common way otherwise-accurate figures still fail to teach.</p>
+        <div class="diagram-cap">Mechanism map — apoptosis restoration (BCL-2 inhibition)</div>
+        <div class="mechmap">
+          <div class="mechnode">BCL-2 inhibitor binds hydrophobic groove<span class="mechsub">Molecular event</span></div>
+          <div class="mecharrow">→</div>
+          <div class="mechnode">BAX/BAK displaced, freed<span class="mechsub">Pathway step</span></div>
+          <div class="mecharrow">→</div>
+          <div class="mechnode">Mitochondrial membrane permeabilized<span class="mechsub">Cellular event</span></div>
+          <div class="mecharrow">→</div>
+          <div class="mechnode">Apoptosis proceeds<span class="mechsub">Cell fate</span></div>
+          <div class="mecharrow">→</div>
+          <div class="mechnode">Tumor burden falls<span class="mechsub">Clinical outcome</span></div>
+        </div>
+        <p style="font-size:13px;color:var(--muted);margin-top:10px">A mechanism map's job is to make a causal chain traceable left to right, one true step at a time — every arrow is a claim the writer can defend, not decoration.</p>
+        <div class="diagram-cap">Diagnostic workflow — incidental thyroid nodule</div>
+        <div class="workflow">
+          <div class="wf-row">
+            <div class="wf-node">Nodule found on imaging</div>
+            <div class="wf-arrow">→</div>
+            <div class="wf-node">TSH measured</div>
+            <div class="wf-arrow">→</div>
+            <div class="wf-node decision">TSH normal or high?</div>
+          </div>
+          <div class="wf-branches">
+            <div class="wf-branch"><span class="tag">If suppressed</span><div class="wf-arrow">→</div><div class="wf-node">Thyroid scan (rule out autonomous nodule)</div></div>
+            <div class="wf-branch"><span class="tag">If normal/high</span><div class="wf-arrow">→</div><div class="wf-node">Ultrasound risk stratification → FNA if indicated</div></div>
+          </div>
+        </div>
+        <p style="font-size:13px;color:var(--muted);margin-top:10px">A diagnostic workflow's job is different: it has to show a decision point and both of its consequences, not just the "expected" path — a workflow diagram that only shows the common branch will mislead a reader who lands on the uncommon one.</p>
+        <h4>Why these are built as different shapes, not just different colors</h4>
+        <p>The mechanism map is a single line because biology at this level is (for teaching purposes) sequential — each step causes the next. The workflow is a branching tree because clinical decision-making is genuinely conditional — the correct next action depends on a real-world answer that isn't known in advance. Using a linear diagram to represent a decision point hides the branch a reader actually needs to see; using a branching diagram for a strictly causal mechanism adds a false sense of choice where there isn't one.</p>
+      `,
+    },
   };
 
   const overlay = document.getElementById('sample-modal');
