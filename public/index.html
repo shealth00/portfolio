@@ -52,7 +52,7 @@ section{padding:100px 0}.section-head{display:flex;justify-content:space-between
 .visual.cancer{background:radial-gradient(circle at 65% 40%,#e5c7a4 0 6%,#9d5d54 7% 16%,transparent 17%),linear-gradient(135deg,#111d2b,#6a3d48)}.cell{position:absolute;border-radius:50%;border:2px solid rgba(255,255,255,.55)}.c1{width:150px;height:150px;left:18%;top:24%}.c2{width:90px;height:90px;right:17%;bottom:18%}.c3{width:48px;height:48px;right:28%;top:15%}.mutation{position:absolute;left:45%;top:40%;font:700 11px monospace;color:#ffe6bd;letter-spacing:.1em}
 
 .process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{padding:25px;background:white;border:1px solid var(--line);border-radius:18px}.num{font-family:var(--serif);color:var(--gold);font-size:34px}.step b{display:block;margin:8px 0}.step p{font-size:13px;color:var(--muted);margin:0}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{padding:28px;background:#fff;border:1px solid var(--line);border-radius:20px}.service h3{margin-top:0;font-family:var(--serif);font-size:22px}.service p{font-size:14px;color:var(--muted)}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{padding:28px;background:#fff;border:1px solid var(--line);border-radius:20px}.service h3{margin-top:0;font-family:var(--serif);font-size:22px}.service p{font-size:14px;color:var(--muted)}.service .read{font-size:12px;font-weight:800;color:var(--teal);margin-top:12px}
 .contact{background:var(--navy);color:white}.contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.contact p{color:#c8d8dc;font-size:18px}.contactbox{border:1px solid rgba(255,255,255,.18);padding:28px;border-radius:22px;background:rgba(255,255,255,.05)}footer{background:var(--teal);color:rgba(255,255,255,.75);padding:34px 0;font-size:12px;text-align:center}footer .foot-brand{font-family:var(--serif);font-size:22px;color:white;margin-bottom:6px}
 .note{font-size:12px;color:var(--muted);margin-top:20px}
 /* contact form additions */
@@ -78,6 +78,7 @@ section{padding:100px 0}.section-head{display:flex;justify-content:space-between
 .modal-body h3{font-family:var(--serif);font-size:32px;line-height:1.1;margin:0 0 18px}
 .modal-body h4{font-family:var(--serif);font-size:17px;color:var(--teal);margin:26px 0 8px}
 .modal-body p{color:#42525c;font-size:15.5px}
+.labtable{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}.labtable th{text-align:left;background:var(--altbg);color:var(--teal);font-size:11px;text-transform:uppercase;letter-spacing:.06em;padding:8px 10px}.labtable td{padding:8px 10px;border-bottom:1px solid var(--line);color:#42525c}.labtable td.flag-high{color:#b3441f;font-weight:700}.labtable td.flag-low{color:#1c6c9c;font-weight:700}
 @media(max-width:600px){.modal-body{padding:28px}.modal-body h3{font-size:26px}}
 </style>
 </head>
@@ -170,11 +171,11 @@ section{padding:100px 0}.section-head{display:flex;justify-content:space-between
 <section id="services"><div class="wrap">
 <div class="section-head"><div><div class="kicker">Capabilities</div><h2>Writing that can survive scrutiny.</h2></div><p class="lede">Built for audiences that care about both scientific precision and practical communication.</p></div>
 <div class="services">
-<div class="service"><h3>Medical Affairs &amp; HCP</h3><p>Mechanism-of-action briefs, disease-state narratives, scientific decks, KOL materials, clinical summaries, literature synthesis, and evidence-based educational content.</p></div>
-<div class="service"><h3>CME &amp; Medical Education</h3><p>Needs-assessment-informed educational content, learning objectives, case-based narratives, slide-deck companion text, faculty materials, and physiology/pathophysiology teaching assets.</p></div>
-<div class="service"><h3>Diagnostics &amp; Laboratory Medicine</h3><p>Diagnostic explanations, assay and workflow documentation, laboratory policies, validation narratives, LIS documentation, quality systems, and technical education.</p></div>
-<div class="service"><h3>Clinical &amp; Patient Communication</h3><p>Clinician-facing reports and summaries alongside patient education that preserves medical accuracy without forcing the reader through unnecessary terminology.</p></div>
-<div class="service"><h3>Regulatory &amp; Technical</h3><p>SOPs, controlled documentation, implementation guides, workflow specifications, compliance-oriented materials, and operational documentation.</p></div>
+<div class="service"><h3>Medical Affairs &amp; HCP</h3><p>Mechanism-of-action briefs, disease-state narratives, scientific decks, KOL materials, clinical summaries, literature synthesis, and evidence-based educational content.</p><button class="read" data-sample="medaffmoa">Sample: Phase I MOA brief · Read full piece →</button></div>
+<div class="service"><h3>CME &amp; Medical Education</h3><p>Needs-assessment-informed educational content, learning objectives, case-based narratives, slide-deck companion text, faculty materials, and physiology/pathophysiology teaching assets.</p><button class="read" data-sample="cmesample">Sample: Phase I/II case-based CME · Read full piece →</button></div>
+<div class="service"><h3>Diagnostics &amp; Laboratory Medicine</h3><p>Diagnostic explanations, assay and workflow documentation, laboratory policies, validation narratives, LIS documentation, quality systems, and technical education.</p><button class="read" data-sample="dxlabsample">Sample: Lab result interpretation · Read full piece →</button></div>
+<div class="service"><h3>Clinical &amp; Patient Communication</h3><p>Clinician-facing reports and summaries alongside patient education that preserves medical accuracy without forcing the reader through unnecessary terminology.</p><button class="read" data-sample="clinpatient">Sample: Informed consent, plain-language · Read full piece →</button></div>
+<div class="service"><h3>Regulatory &amp; Technical</h3><p>SOPs, controlled documentation, implementation guides, workflow specifications, compliance-oriented materials, and operational documentation.</p><button class="read" data-sample="regtech">Sample: IRB &amp; recruitment SOP · Read full piece →</button></div>
 <div class="service"><h3>Scientific Visual Communication</h3><p>Mechanism maps, pathogenesis diagrams, diagnostic workflows, graphical abstracts, clinical infographics, and anatomy-first educational figures.</p></div>
 </div>
 </div></section>

@@ -175,6 +175,107 @@
         <p>None of this is visible in the final reported value, and that is precisely the point: a clinician interpreting a result is implicitly trusting every pre-analytical, analytical, and quality-system step that preceded it. Writing that makes those steps clear, auditable, and consistently executed is what allows that trust to be warranted rather than assumed.</p>
       `,
     },
+    medaffmoa: {
+      meta: 'Medical Affairs · Sample MOA brief · Hypothetical Phase I asset',
+      title: 'Mechanism-of-Action Brief: A Phase I Asset in Relapsed/Refractory Lymphoma',
+      body: `
+        <p><em>This is a portfolio demonstration built around a hypothetical compound and hypothetical Phase I results, written in the format and register of a real medical affairs MOA brief for an HCP audience. No real drug, sponsor, or trial data is represented.</em></p>
+        <h4>Unmet need and target rationale</h4>
+        <p>Patients with relapsed/refractory diffuse large B-cell lymphoma (DLBCL) who progress after CAR-T therapy have limited options and historically poor outcomes. Compound SH-2201 was developed against a validated but incompletely drugged target in this setting: BCL-2, the anti-apoptotic protein that many DLBCL clones upregulate to escape programmed cell death. Selective BCL-2 inhibition is mechanistically attractive here because resistance to CAR-T frequently involves antigen-independent survival pathways rather than antigen loss alone — meaning a drug that re-sensitizes the cell to apoptosis can work independently of the CAR-T mechanism that already failed.</p>
+        <h4>Mechanism of action</h4>
+        <p>SH-2201 is an orally bioavailable, selective small-molecule BH3-mimetic. It occupies the hydrophobic groove of BCL-2 that would otherwise sequester pro-apoptotic proteins (BAX/BAK), displacing them and restoring the cell's ability to undergo mitochondrial outer membrane permeabilization in response to normal apoptotic signaling. Selectivity for BCL-2 over BCL-XL is the key differentiation point for an HCP audience: BCL-XL inhibition is the mechanistic driver of the dose-limiting thrombocytopenia seen with earlier, less selective agents in this class, since platelets depend on BCL-XL for survival. A brief written for prescribers should make this structure–toxicity relationship explicit, not just assert "improved safety."</p>
+        <h4>Phase I design and population (hypothetical)</h4>
+        <p>In this illustrative Phase I dose-escalation study, SH-2201 was evaluated in adults with relapsed/refractory DLBCL after ≥2 prior lines of therapy, including prior CAR-T in roughly half the cohort. The study used a standard 3+3 design with expansion cohorts at the recommended Phase II dose, and included mandatory tumor lysis syndrome (TLS) prophylaxis and a step-up dosing schedule — a direct consequence of BCL-2 inhibition's known mechanism-based TLS risk in high tumor-burden disease.</p>
+        <h4>Efficacy signal (hypothetical)</h4>
+        <p>At the recommended Phase II dose, the illustrative overall response rate was 41%, with a subset of complete responses concentrated in patients without prior BCL-2-pathway-directed therapy. Consistent with the mechanism, response depth correlated with baseline BCL-2 expression by immunohistochemistry — a biomarker relationship that, if it held in later-phase data, would support enrichment strategies rather than all-comer dosing.</p>
+        <h4>Safety profile (hypothetical)</h4>
+        <p>The dominant toxicities were mechanism-based: laboratory TLS (managed with prophylaxis and dose titration) and neutropenia, with thrombocytopenia notably less frequent and less severe than historical BCL-XL-inhibiting comparators — the safety signal the mechanism section above was written to set up. No unexpected off-target signal emerged through the dose-escalation cohorts.</p>
+        <h4>Why this brief is structured this way</h4>
+        <p>A medical affairs MOA brief earns HCP trust by making each downstream claim — the differentiated safety profile, the biomarker-enrichment rationale, the TLS-prophylaxis requirement — traceable back to a specific mechanistic fact established earlier in the document, rather than presenting mechanism and clinical data as separate, loosely connected sections.</p>
+      `,
+    },
+    cmesample: {
+      meta: 'CME · Case-based module · Hypothetical Phase I/II data',
+      title: 'CME Case Review: Selecting Therapy After CAR-T Failure in DLBCL',
+      body: `
+        <p><em>This is a portfolio demonstration of case-based CME structure, built around the same hypothetical compound (SH-2201) and hypothetical Phase I/II results used in the Medical Affairs MOA brief sample. No real drug, sponsor, or trial data is represented.</em></p>
+        <h4>Learning objectives</h4>
+        <p>After completing this module, learners should be able to: (1) describe the mechanistic basis for BCL-2-directed therapy after CAR-T failure in DLBCL; (2) identify the toxicity profile that distinguishes selective BCL-2 inhibition from earlier, less selective agents; and (3) apply Phase I/II efficacy and biomarker data to a treatment-selection decision in a representative case.</p>
+        <h4>Case vignette</h4>
+        <p>A 67-year-old man with DLBCL relapses eight months after CAR-T therapy, presenting with rapidly enlarging cervical lymphadenopathy and a rising LDH. Biopsy confirms CD19-positive relapse with preserved BCL-2 expression by immunohistochemistry. He has an ECOG performance status of 1 and no significant baseline cytopenias. The treating team is weighing a BCL-2-directed regimen (illustrative agent SH-2201) against a bispecific antibody, and asks: what does the mechanism of relapse tell us about which approach is more likely to work?</p>
+        <h4>Discussion: why mechanism of relapse matters here</h4>
+        <p>CAR-T failure in DLBCL is mechanistically heterogeneous: some relapses reflect antigen loss or downregulation (CD19-negative escape), while others reflect antigen-independent survival — the tumor cell evades apoptosis despite an intact CAR-T-mediated cytotoxic signal. This case's CD19-positive relapse pattern is more consistent with the latter, which is the specific scenario in which a BCL-2 inhibitor's mechanism — restoring apoptotic sensitivity rather than re-engaging antigen recognition — offers a non-overlapping rationale relative to re-attempting antigen-directed therapy.</p>
+        <h4>Applying the illustrative Phase I/II data</h4>
+        <p>In the hypothetical Phase I/II dataset introduced in the MOA brief, response to SH-2201 correlated with baseline BCL-2 expression by immunohistochemistry — present in this patient's biopsy. The illustrative safety data (mechanism-based TLS risk, manageable with prophylaxis and step-up dosing; comparatively preserved platelet counts due to BCL-2 selectivity over BCL-XL) are also directly relevant given this patient's preserved baseline counts, which permit standard step-up dosing without dose-reduction adjustments.</p>
+        <h4>Faculty discussion prompt</h4>
+        <p>Ask learners: if this patient's relapse biopsy had instead shown loss of CD19 expression, would the mechanistic rationale for a BCL-2-directed approach change? (Answer: not materially — BCL-2 inhibition's mechanism is independent of CD19 status, which is precisely why it is positioned as a non-cross-resistant option regardless of the antigen-loss versus antigen-independent relapse distinction; the biomarker that matters for this drug is BCL-2 expression, not CD19.)</p>
+        <h4>Why this module is structured this way</h4>
+        <p>Case-based CME earns credibility by making the learner apply mechanism to a specific clinical decision point, not just recall it — the case above is built so that the "right answer" is only reachable by reasoning through the mechanism section, not by pattern-matching a drug name to a disease.</p>
+      `,
+    },
+    dxlabsample: {
+      meta: 'Diagnostics · Laboratory medicine · Sample result interpretation',
+      title: 'Reading the Panel: A Lipid &amp; Inflammatory Marker Report, Explained',
+      body: `
+        <p><em>This is a portfolio demonstration built around a fictional, composite patient and fictional lab values, written in the format of a diagnostic explainer that walks a reader through a result panel and its clinical implications. No real patient data is represented.</em></p>
+        <table class="labtable">
+          <tr><th>Test</th><th>Result</th><th>Reference range</th><th>Flag</th></tr>
+          <tr><td>Total cholesterol</td><td>248 mg/dL</td><td>&lt;200 mg/dL</td><td class="flag-high">High</td></tr>
+          <tr><td>LDL cholesterol</td><td>162 mg/dL</td><td>&lt;100 mg/dL</td><td class="flag-high">High</td></tr>
+          <tr><td>HDL cholesterol</td><td>38 mg/dL</td><td>&gt;40 mg/dL (men)</td><td class="flag-low">Low</td></tr>
+          <tr><td>Triglycerides</td><td>210 mg/dL</td><td>&lt;150 mg/dL</td><td class="flag-high">High</td></tr>
+          <tr><td>hs-CRP</td><td>4.1 mg/L</td><td>&lt;1.0 mg/L (low risk)</td><td class="flag-high">High</td></tr>
+        </table>
+        <h4>What the lipid pattern means, not just the numbers</h4>
+        <p>Reading this panel as four independent "high/low" flags misses the pattern that matters clinically: elevated triglycerides paired with low HDL is the signature of an atherogenic dyslipidemia driven by insulin resistance, not simply "too much fat in the diet." When triglyceride-rich VLDL particles are abundant, cholesteryl ester transfer protein exchanges triglycerides into HDL particles in return for cholesterol — those triglyceride-enriched HDL particles are then cleared faster, which is why HDL falls as triglycerides rise. The LDL number alone doesn't capture this: at this triglyceride level, LDL particles also tend to be smaller and denser than the LDL-C number suggests, and small dense LDL is more atherogenic per particle than the same LDL-C concentration made up of large, buoyant particles.</p>
+        <h4>Why hs-CRP was ordered alongside a lipid panel</h4>
+        <p>High-sensitivity CRP is not a diagnostic test for any single disease; it is a marker of low-grade systemic inflammation, which independently predicts cardiovascular risk on top of lipid values. An hs-CRP of 4.1 mg/L is in the "high" risk category (&gt;3.0 mg/L) and, combined with this atherogenic lipid pattern, suggests the inflammatory and metabolic risk pathways are both active — relevant because statin therapy's benefit is partly mediated through its anti-inflammatory effect, not cholesterol-lowering alone, which is part of the rationale for statin therapy even in patients whose LDL-C is only moderately elevated but whose hs-CRP is high.</p>
+        <h4>Clinical implication</h4>
+        <p>Taken together, this pattern points toward an underlying insulin-resistant or metabolic-syndrome-type process rather than an isolated lipid disorder — which changes the workup, not just the treatment: it supports checking a fasting glucose or HbA1c, calculating a 10-year ASCVD risk score that incorporates this lipid and inflammatory data, and framing lifestyle counseling around insulin sensitivity (weight, activity, refined-carbohydrate intake) rather than dietary cholesterol alone, alongside statin therapy where risk calculations support it.</p>
+        <h4>Why this explainer is structured this way</h4>
+        <p>A diagnostic explainer for a mixed panel like this should connect the individual flagged values into one underlying physiological story before it gets to "what to do about it" — a reader who understands why triglycerides and HDL move together, and why hs-CRP was ordered at all, retains the clinical reasoning, not just the recommendation.</p>
+      `,
+    },
+    clinpatient: {
+      meta: 'Clinical & patient communication · Sample informed consent language · Hypothetical Phase II trial',
+      title: 'Rewriting Informed Consent for Comprehension, Not Just Compliance',
+      body: `
+        <p><em>This is a portfolio demonstration of plain-language patient-facing trial communication, built around a hypothetical Phase II trial. It illustrates how IRB-required consent content can be made genuinely readable without losing any required disclosure. No real trial, sponsor, or IRB submission is represented.</em></p>
+        <h4>The problem this rewrite solves</h4>
+        <p>A standard informed consent form must disclose purpose, procedures, risks, benefits, alternatives, confidentiality, and voluntary withdrawal rights — requirements set by the IRB and, ultimately, by the Common Rule and ICH-GCP. None of that content is optional. What is negotiable is the reading level: consent forms routinely test at a college reading level despite guidance recommending an 8th-grade level, which means the form can be fully compliant and still fail the ethical purpose of informed consent — a participant who signs something they didn't understand has not actually given informed consent, whatever the signature says.</p>
+        <h4>Before (compliant but dense)</h4>
+        <p style="border-left:3px solid var(--line);padding-left:14px;color:#6b7a83;font-style:italic">"Participants randomized to the investigational arm will receive the study drug administered via subcutaneous injection at a dose of 200mg every 4 weeks for a duration of 24 weeks, with efficacy assessed via the primary endpoint of progression-free survival as determined by RECIST v1.1 criteria at scheduled imaging intervals."</p>
+        <h4>After (same disclosures, plain language)</h4>
+        <p style="border-left:3px solid var(--teal);padding-left:14px;color:#2c3b44">"If you're randomly assigned to the study drug group, you'll get an injection under your skin every 4 weeks for about 6 months. We'll track whether the treatment is working by doing regular scans and measuring whether your cancer grows, using a standard scoring system doctors use for this."</p>
+        <h4>What changed, and what didn't</h4>
+        <p>Every required fact is still present — route of administration, dose, frequency, duration, how efficacy is measured, and that measurement's standardized basis. What changed is sentence length (one long compound sentence became three short ones), vocabulary ("randomized," "administered," "duration," "endpoint" replaced or explained), and passive-to-active voice. "RECIST v1.1 criteria" is kept as a phrase (removing it entirely would understate the rigor of the assessment) but is now explained in plain terms rather than left to stand alone.</p>
+        <h4>Risk disclosure: the section that most needs this treatment</h4>
+        <p>Risk sections are where plain language matters most ethically, because this is the section a participant most needs to actually weigh. A risk written as "Grade 3-4 neutropenia occurred in 12% of participants in the dose-escalation cohort" discloses the fact but not its meaning to a layperson. A plain-language version — "About 1 in 8 people on this dose had a serious drop in a type of white blood cell that fights infection, which can require treatment or a hospital stay" — discloses the same fact in a form the reader can actually use to make a decision, which is the entire ethical purpose of the disclosure requirement.</p>
+        <h4>Why this is a writing skill, not just a simplification pass</h4>
+        <p>Plain-language consent rewriting fails when it either drops required content to shorten the text, or simplifies vocabulary while leaving sentence structure and organization untouched. Done well, it requires understanding the regulatory requirement well enough to know which words are load-bearing (must stay) and which are just habit (can go) — which is why this work sits at the intersection of clinical writing and regulatory literacy, not general copyediting.</p>
+      `,
+    },
+    regtech: {
+      meta: 'Regulatory & technical · Sample SOP · Hypothetical multi-phase program',
+      title: 'SOP: Participant Recruitment and IRB Oversight Across Phase I–IV',
+      body: `
+        <p><em>This is a portfolio demonstration of a controlled-document-style SOP for participant recruitment and ethics oversight across the trial lifecycle, built around a hypothetical clinical development program. No real institution, sponsor, or IRB is represented.</em></p>
+        <h4>Purpose and scope</h4>
+        <p>This SOP defines the participant recruitment and Institutional Review Board (IRB) oversight process applicable to Phase I through Phase IV clinical trials conducted or supported by the organization. It applies to all clinical, regulatory, and site-facing staff involved in protocol development, recruitment material creation, informed consent administration, and ongoing safety reporting.</p>
+        <h4>Phase-specific recruitment considerations</h4>
+        <p><b>Phase I</b> recruitment typically enrolls small healthy-volunteer or patient cohorts under dose-escalation designs; recruitment materials must clearly disclose the first-in-human or early-phase nature of the study and the correspondingly higher uncertainty around risk. <b>Phase II</b> recruitment expands to a defined patient population and introduces randomization/blinding language requirements in consent and advertising materials. <b>Phase III</b> recruitment operates at multi-site scale and requires site-level IRB or central IRB coordination, with recruitment materials standardized across sites to avoid protocol-inconsistent claims. <b>Phase IV</b> (post-marketing) recruitment involves an approved product and requires recruitment materials to avoid implying investigational status for an already-approved therapy.</p>
+        <h4>IRB submission and review requirements</h4>
+        <p>All recruitment materials — advertisements, screening scripts, referral letters, and social media content — require IRB approval prior to use, as they are considered an extension of the informed consent process under 45 CFR 46 and ICH-GCP E6(R2). Materials must not contain language that overstates benefit, understates risk, or implies guaranteed access to treatment. Any material revision requires re-submission and approval before continued use; using an unapproved or expired recruitment material version is a reportable protocol deviation.</p>
+        <h4>Informed consent documentation requirements</h4>
+        <p>Consent must be obtained prior to any study-related procedure, documented with a dated signature from the participant (or legally authorized representative) and the individual obtaining consent, and re-consent is required whenever a protocol amendment materially changes risk, procedures, or alternatives available to an already-enrolled participant. Non-English-speaking participants require an IRB-approved translated consent form or a qualified interpreter with documentation of the interpretation process — a verbal-only translation without documentation does not satisfy this requirement.</p>
+        <h4>Vulnerable population safeguards</h4>
+        <p>Recruitment targeting populations defined as vulnerable under 45 CFR 46 Subparts B–D (pregnant individuals, children, prisoners) requires additional IRB-level safeguards, which must be specified in the protocol before recruitment materials referencing that population may be submitted for approval. Socioeconomically disadvantaged populations, while not a formally defined vulnerable category, require documented justification when recruitment is concentrated in a single low-resource site to demonstrate the population isn't being selected for convenience rather than scientific rationale.</p>
+        <h4>Ongoing oversight</h4>
+        <p>Enrolled-participant safety data is reported to the IRB per the approved reporting schedule (typically continuing review at least annually, plus expedited reporting of unanticipated problems involving risk to participants). Recruitment activity may be paused or terminated by IRB directive if enrollment patterns, safety signals, or protocol deviations warrant review.</p>
+        <h4>Why this SOP is structured this way</h4>
+        <p>An SOP in this domain has to make the phase-dependent and population-dependent branches explicit rather than writing one generic "get IRB approval" instruction — the actual compliance risk lives in the differences between phases and populations, not in the parts of the process that are the same every time.</p>
+      `,
+    },
   };
 
   const overlay = document.getElementById('sample-modal');
