@@ -1,7 +1,7 @@
 {
   "name": "medical-writer-portfolio",
   "version": "1.0.0",
-  "description": "Dr. I.AMU — medical, pharma, and public-health writing portfolio.",
+  "description": "I.AMU.MD — medical, pharma, and public-health writing portfolio.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
