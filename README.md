@@ -1,4 +1,4 @@
-# Ishmael Amu, MD — Medical Writing Portfolio
+# Dr. I.AMU — Medical Writing Portfolio
 
 Single-page portfolio (About / Writing samples / Visual Science /
 Capabilities / Contact) for `portfolio.shealthmedia.org`. Static HTML/CSS/JS
